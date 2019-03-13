@@ -69,6 +69,36 @@ class Index extends React.Component {
             <a>Go to the dashboard page</a>
           </Link>
         </Typography>
+        <Typography gutterBottom>
+          <Link href="/album">
+            <a>Go to the album page</a>
+          </Link>
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/checkout">
+            <a>Go to the checkout page</a>
+          </Link>
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/pricing">
+            <a>Go to the pricing page</a>
+          </Link>
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/sign-in-side">
+            <a>Go to the sign-in-side page</a>
+          </Link>
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/sign-up">
+            <a>Go to the sign-up page</a>
+          </Link>
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/sticky-footer">
+            <a>Go to the sticky-footer page</a>
+          </Link>
+        </Typography>
         <Button
           variant="contained"
           color="secondary"
