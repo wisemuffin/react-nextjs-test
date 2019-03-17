@@ -6,18 +6,27 @@
     "@material-ui/core": "latest",
     "@material-ui/icons": "^3.0.2",
     "@material-ui/lab": "^3.0.0-alpha.30",
+    "axios": "^0.18.0",
     "clsx": "^1.0.3",
     "jss": "latest",
+    "markdown-to-jsx": "^6.9.2",
     "next": "latest",
+    "numeral": "^2.0.6",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-jss": "^8.1.0",
-    "recharts": "^1.5.0"
+    "react-redux": "^6.0.1",
+    "recharts": "^1.5.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "dev": "next -p 8080",
+    "dev": "next -p 8800",
     "build": "next build",
-    "start": "next start -p 8080"
+    "start": "next start"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.0.1"
   }
 }
