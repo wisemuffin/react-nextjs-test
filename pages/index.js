@@ -15,6 +15,8 @@ import { withStyles } from "@material-ui/core/styles";
 
 import Link from "next/link";
 
+import Layout from "../components/UI/Layout";
+
 const styles = theme => ({
   root: {
     textAlign: "center",
@@ -34,63 +36,59 @@ const index = props => {
   };
 
   return (
-    <div className={props.classes.root}>
-      <Dialog open={openState} onClose={handleClose}>
-        <DialogTitle>Super Secret Password</DialogTitle>
-        <DialogContent>
-          <DialogContentText>1-2-3-4-5</DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button color="primary" onClick={handleClose}>
-            OK
-          </Button>
-        </DialogActions>
-      </Dialog>
-      <Typography variant="h4" gutterBottom>
-        Material-UI
-      </Typography>
-      <Typography variant="subtitle1" gutterBottom>
-        example project
-      </Typography>
-      <Typography gutterBottom>
-        <Link href="/about">
-          <a>Go to the about page</a>
-        </Link>
-      </Typography>
-      <Typography gutterBottom>
-        <Link href="/dashboard">
-          <a>Go to the dashboard page</a>
-        </Link>
-      </Typography>
-      <Typography gutterBottom>
-        <Link href="/album">
-          <a>Go to the album page</a>
-        </Link>
-      </Typography>
-      <Typography gutterBottom>
-        <Link href="/checkout">
-          <a>Go to the checkout page</a>
-        </Link>
-      </Typography>
-      <Typography gutterBottom>
-        <Link href="/pricing">
-          <a>Go to the pricing page</a>
-        </Link>
-      </Typography>
-      <Typography gutterBottom>
-        <Link href="/sign-in">
-          <a>Go to the sign-in page</a>
-        </Link>
-      </Typography>
-      <Typography gutterBottom>
-        <Link href="/sign-up">
-          <a>Go to the sign-up page</a>
-        </Link>
-      </Typography>
-      <Button variant="contained" color="secondary" onClick={handleClick}>
-        Super Secret Password
-      </Button>
-    </div>
+    <Layout>
+      <div className={props.classes.root}>
+        <Typography variant="h2" gutterBottom>
+          Wisemuffin
+        </Typography>
+        <Dialog open={openState} onClose={handleClose}>
+          <DialogTitle>Super Secret Password</DialogTitle>
+          <DialogContent>
+            <DialogContentText>1-2-3-4-5</DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button color="primary" onClick={handleClose}>
+              OK
+            </Button>
+          </DialogActions>
+        </Dialog>
+        <Typography variant="h4" gutterBottom>
+          Material-UI
+        </Typography>
+        <Typography variant="subtitle1" gutterBottom>
+          example project
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/about">
+            <a>Go to the about page</a>
+          </Link>
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/dashboard">
+            <a>Go to the dashboard page</a>
+          </Link>
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/album">
+            <a>Go to the album page</a>
+          </Link>
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/checkout">
+            <a>Go to the checkout page</a>
+          </Link>
+        </Typography>
+        <Typography gutterBottom>
+          <Link href="/pricing">
+            <a>Go to the pricing page</a>
+          </Link>
+        </Typography>
+
+        <Button variant="contained" color="secondary" onClick={handleClick}>
+          Super Secret Password
+        </Button>
+      </div>
+    </Layout>
   );
 };
 

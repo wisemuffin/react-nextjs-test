@@ -16,3 +16,8 @@ yarn-error.log*
 
 # Next.js
 /.next
+
+# api keys
+.env
+
+next.config.js

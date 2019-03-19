@@ -17,6 +17,8 @@ import Typography from "@material-ui/core/Typography";
 import { updateObject, checkValidity } from "../../shared/utility";
 import * as actions from "../../store/actions/index";
 
+import Layout from "../../components/UI/Layout";
+
 const styles = theme => ({
   main: {
     width: "auto",
@@ -130,6 +132,7 @@ const auth = props => {
       <Input
         id={formElement.id}
         name={formElement.id}
+        type={formElement.id}
         autoComplete={formElement.config.elementConfig.type}
         autoFocus
         onChange={event => inputChangedHandler(event, formElement.id)}
@@ -153,17 +156,18 @@ const auth = props => {
   // }
 
   return (
-    <main className={classes.main}>
-      <CssBaseline />
-      <Paper className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Sign in
-        </Typography>
-        <form className={classes.form}>
-          {/* <FormControl margin="normal" required fullWidth>
+    <Layout>
+      <main className={classes.main}>
+        <CssBaseline />
+        <Paper className={classes.paper}>
+          <Avatar className={classes.avatar}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            {isSignup ? "Sign Up" : "Sign In"}
+          </Typography>
+          <form className={classes.form}>
+            {/* <FormControl margin="normal" required fullWidth>
             <InputLabel htmlFor="email">Email Address</InputLabel>
             <Input id="email" name="email" autoComplete="email" autoFocus />
           </FormControl>
@@ -171,33 +175,34 @@ const auth = props => {
             <InputLabel htmlFor="password">Password</InputLabel>
             <Input name="password" type="password" id="password" autoComplete="current-password" />
           </FormControl> */}
-          {form}
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-            onClick={submitHandler}
-          >
-            Sign in
-          </Button>
-          <Button
-            onClick={switchAuthModeHandler}
-            type="submit"
-            variant="contained"
-            color="secondary"
-            className={classes.submit}
-          >
-            SWITCH TO {isSignup ? "SIGNIN" : "SIGNUP"}
-          </Button>
-        </form>
-      </Paper>
-    </main>
+            {form}
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="Remember me"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              onClick={submitHandler}
+            >
+              {isSignup ? "Sign Up" : "Sign In"}
+            </Button>
+            <Button
+              onClick={switchAuthModeHandler}
+              type="submit"
+              variant="contained"
+              color="secondary"
+              className={classes.submit}
+            >
+              SWITCH TO {isSignup ? "SIGN IN" : "SIGN UP"}
+            </Button>
+          </form>
+        </Paper>
+      </main>
+    </Layout>
   );
 };
 
